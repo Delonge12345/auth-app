@@ -5,7 +5,7 @@ import errorsReducer from "./errorsReducer";
 
 
 let rootReducer = combineReducers({
-    dialogsPage: errorsReducer
+   errorsPage: errorsReducer
 })
 
 

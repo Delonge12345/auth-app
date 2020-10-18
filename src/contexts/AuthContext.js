@@ -116,7 +116,7 @@ export const AuthProvider = ({children}) => {
     const [state, dispatch] = useReducer(reducer, initialAuthState);
 
     const login = async (email, password) => {
-        console.log("Making response...")
+        console.log("Making response...", email, password)
         const response = await axiosInstance.post('login', {email, password});
         const {access_token, avatar, name, refresh_token, tier} = response.data;
         console.log("Response for login in in Context Provider: ", response)

@@ -8,15 +8,18 @@ import theme from './theme';
 import {Provider} from "react-redux";
 import store from "./redux/rootReducer";
 import {AuthProvider} from "./contexts/AuthContext";
-
+import {AxiosHandler} from "./containers/AxiosHandler";
 
 ReactDOM.render(
     <React.StrictMode>
+
         <ThemeProvider theme={theme}>
             <Router>
                 <Provider store={store}>
                     <AuthProvider>
-                        <App/>
+                        <AxiosHandler>
+                            <App />
+                        </AxiosHandler>
                     </AuthProvider>
                 </Provider>
             </Router>
